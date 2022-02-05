@@ -168,6 +168,9 @@ img {
   margin-bottom: var(--mb-1);
 }
 
+/*MEDIA QUERIE QUE CONFORME O TAMANHO DA 
+TELA A SER VISUALIZADA VAI SENDO ALTERADA*/
+
 @media screen and (max-width: 968px) {
   .nav__menu {
     position: fixed;
@@ -231,7 +234,7 @@ img {
 
 /*SOCIAL*/
 .social__container { 
-  grid: max-content;
+  grid-template-columns: max-content;
   gap: 1rem;
 }
 
@@ -294,6 +297,12 @@ img {
   font-size: var(--h3-font-size);
 }
 
+.experience__description {
+  text-align: justify;
+}
+
+
+.experience__company,
 .education__studies {
   font-size: var(--small-font-size);
   color: var(--title-color);
@@ -304,3 +313,106 @@ img {
 }
 
 /*FIM SOCIAL AND EXPERIENCE*/
+
+/* skills */
+.skills__content { 
+  grid-template-columns:  repeat(2,1fr);
+  /*display: flex;
+  column-count: 2;
+  para que reflita o espaçamento de 1frame 
+  estilizar a ul e li  
+  */
+  gap:0;
+}
+
+.skills__name { 
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb-3);
+}
+
+.skills__circle {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  margin-right: 0.75rem;
+}
+
+/* fim skills*/ 
+
+/*CERTIFICATES*/
+
+.certificate__title { 
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.certificate__description {
+  text-align: justify;
+  text-indent: 1.5rem;
+}
+
+/*INTERESTS*/
+
+.interests__container {
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: var(--mb-2);
+}
+
+.interests__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.interests__icons {
+  font-size:  1.5rem;
+  color: blue;
+  margin-bottom: 0.25rem;
+}
+
+.interests__name {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*ESTILISANDO OS RESUMOS ESQUERDA E DIREITA */
+.resume {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  background-color: var(--container-color);
+  box-shadow: 0 0 8px blue
+
+}
+
+.resume__left { 
+  background-color: pink;
+}
+
+.resume__left, 
+.resume__right {
+  padding: 0 1.5rem;
+}
+
+.section-title,
+.profile__description {
+  text-align: initial;
+}
+
+.home__container { 
+  gap: 1.5rem;
+}
